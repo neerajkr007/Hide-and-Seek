@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: b00c3a8e56f70ee4b80bcbdb8a70fdb6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: M16_10_low
+    100004: M16_11_low
+    100006: M16_12_low
+    100008: M16_13_low
+    100010: M16_14_low
+    100012: M16_1_low
+    100014: M16_2_1_low
+    100016: M16_2_1_low1
+    100018: M16_2_1_low2
+    100020: M16_2_1_low3
+    100022: M16_2_2_low
+    100024: M16_2_low
+    100026: M16_3_low
+    100028: M16_4_low
+    100030: M16_5_low
+    100032: M16_6_low
+    100034: M16_7_low
+    100036: M16_8_low
+    100038: M16_9_low
+    100040: M16_low
+    100042: Rifle_Caliber_5_56
+    100044: Rifle_Caliber_5_56_1
+    400000: //RootNode
+    400002: M16_10_low
+    400004: M16_11_low
+    400006: M16_12_low
+    400008: M16_13_low
+    400010: M16_14_low
+    400012: M16_1_low
+    400014: M16_2_1_low
+    400016: M16_2_1_low1
+    400018: M16_2_1_low2
+    400020: M16_2_1_low3
+    400022: M16_2_2_low
+    400024: M16_2_low
+    400026: M16_3_low
+    400028: M16_4_low
+    400030: M16_5_low
+    400032: M16_6_low
+    400034: M16_7_low
+    400036: M16_8_low
+    400038: M16_9_low
+    400040: M16_low
+    400042: Rifle_Caliber_5_56
+    400044: Rifle_Caliber_5_56_1
+    2100000: Mat_Rifle_Caliber_5_56
+    2100002: Mat_Rifle_Caliber_5_56_1
+    2300000: M16_10_low
+    2300002: M16_11_low
+    2300004: M16_12_low
+    2300006: M16_13_low
+    2300008: M16_14_low
+    2300010: M16_1_low
+    2300012: M16_2_1_low
+    2300014: M16_2_1_low1
+    2300016: M16_2_1_low2
+    2300018: M16_2_1_low3
+    2300020: M16_2_2_low
+    2300022: M16_2_low
+    2300024: M16_3_low
+    2300026: M16_4_low
+    2300028: M16_5_low
+    2300030: M16_6_low
+    2300032: M16_7_low
+    2300034: M16_8_low
+    2300036: M16_9_low
+    2300038: M16_low
+    3300000: M16_10_low
+    3300002: M16_11_low
+    3300004: M16_12_low
+    3300006: M16_13_low
+    3300008: M16_14_low
+    3300010: M16_1_low
+    3300012: M16_2_1_low
+    3300014: M16_2_1_low1
+    3300016: M16_2_1_low2
+    3300018: M16_2_1_low3
+    3300020: M16_2_2_low
+    3300022: M16_2_low
+    3300024: M16_3_low
+    3300026: M16_4_low
+    3300028: M16_5_low
+    3300030: M16_6_low
+    3300032: M16_7_low
+    3300034: M16_8_low
+    3300036: M16_9_low
+    3300038: M16_low
+    4300000: M16_13_low
+    4300002: M16_10_low
+    4300004: M16_2_low
+    4300006: M16_9_low
+    4300008: M16_11_low
+    4300010: M16_12_low
+    4300012: M16_8_low
+    4300014: M16_14_low
+    4300016: M16_7_low
+    4300018: M16_3_low
+    4300020: M16_6_low
+    4300022: M16_4_low
+    4300024: M16_5_low
+    4300026: M16_1_low
+    4300028: M16_low
+    4300030: M16_2_1_low
+    4300032: M16_2_2_low
+    4300034: M16_2_1_low1
+    4300036: M16_2_1_low2
+    4300038: M16_2_1_low3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

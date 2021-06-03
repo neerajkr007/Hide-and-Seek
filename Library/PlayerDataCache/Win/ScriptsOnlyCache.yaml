@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - characterMovement
     - create_room
     - join_room
+    - openGate
     - photon_player
     - update_names
     Cinemachine.dll:
@@ -34,6 +35,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -69,28 +71,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1812}
+      Script: {instanceID: 1814}
     - Class: 114
-      Script: {instanceID: 2198}
+      Script: {instanceID: 2200}
     - Class: 114
-      Script: {instanceID: 2232}
+      Script: {instanceID: 2234}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2516}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3066}
     - Class: 114
-      Script: {instanceID: 4024}
+      Script: {instanceID: 3310}
+    - Class: 114
+      Script: {instanceID: 4030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -98,6 +110,8 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    - Class: 850595691
       Script: {instanceID: 0}
     Assets/Scenes/MainMenu/MainMenu.unity:
     - Class: 1
@@ -120,6 +134,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -137,53 +155,53 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1550}
+      Script: {instanceID: 1552}
     - Class: 114
-      Script: {instanceID: 1614}
+      Script: {instanceID: 1616}
     - Class: 114
-      Script: {instanceID: 1962}
+      Script: {instanceID: 1964}
     - Class: 114
-      Script: {instanceID: 2198}
+      Script: {instanceID: 2200}
     - Class: 114
-      Script: {instanceID: 2414}
+      Script: {instanceID: 2416}
     - Class: 114
-      Script: {instanceID: 2418}
+      Script: {instanceID: 2420}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2902}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 2970}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2998}
     - Class: 114
-      Script: {instanceID: 3018}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3198}
     - Class: 114
-      Script: {instanceID: 3264}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3444}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3446}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 3626}
     - Class: 114
-      Script: {instanceID: 3668}
+      Script: {instanceID: 3672}
     - Class: 114
-      Script: {instanceID: 3836}
+      Script: {instanceID: 3842}
     - Class: 114
-      Script: {instanceID: 3850}
+      Script: {instanceID: 3856}
     - Class: 114
-      Script: {instanceID: 3874}
+      Script: {instanceID: 3880}
     - Class: 114
-      Script: {instanceID: 4002}
+      Script: {instanceID: 4008}
     - Class: 114
-      Script: {instanceID: 4222}
+      Script: {instanceID: 4230}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -459,7 +477,7 @@ ScriptsOnlyBuild:
     className: CinemachineTransposer
   - hash:
       serializedVersion: 2
-      Hash: 74c59a9667c2618255bcc4a1071c77df
+      Hash: 41a2a4709b902a635ea4f8613cfe64ab
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: photon_player
@@ -577,6 +595,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: openGate
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1023,6 +1047,12 @@ ScriptsOnlyBuild:
     className: CinemachineTrack
   - hash:
       serializedVersion: 2
+      Hash: 84c26f0dea35cfbdb574f5a3a4a938d8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveObjectController
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1155,6 +1185,12 @@ ScriptsOnlyBuild:
     className: CinemachineFollowZoom
   - hash:
       serializedVersion: 2
+      Hash: 3c91d889b13069da16bce43130453091
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveableObject
+  - hash:
+      serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1187,4 +1223,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu/MainMenu.unity
   - Assets/Scenes/Game/Game.unity
-  playerPath: C:/UNITY/Hide and Seek/Builds/Hide and Seek.exe
+  playerPath: C:/UNITY/Builds-PC/Hide and Seek.exe

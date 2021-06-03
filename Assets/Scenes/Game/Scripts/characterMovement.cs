@@ -12,7 +12,9 @@ public class characterMovement : MonoBehaviour
     float turnSmoothVelocity;
     private PhotonView pv;
     public Animator animator;
-
+    private Vector3 direction;
+    private float targetAngle;
+    private Vector3 moveDir;
     void Start()
     {
         //Cursor.visible = false;
@@ -29,22 +31,53 @@ public class characterMovement : MonoBehaviour
             animator.SetFloat("horizontal", horizotal);
             float vertical = Input.GetAxis("Vertical");
             animator.SetFloat("vertical", vertical);
-            if(vertical != 0f && vertical != 1f)
+            if(horizotal != 0f && horizotal != 1f)
             {
-                //print(vertical + "  " + horizotal);
+                //print(horizotal);//  + "  " + horizotal);
             }
-            Vector3 direction = new Vector3(horizotal, 0f, vertical).normalized;
-
+            direction = new Vector3(horizotal, 0f, vertical).normalized;
             if(direction.magnitude >= 0.1f)
             {
-                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                //print("works ?");
+                if(direction.z >= 0f)
+                {
+                    targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                }
+                else if(direction.z < 0)
+                {
+                    targetAngle = cam.eulerAngles.y;
+                }
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                if(direction.z >= 0f)
+                {
+                    moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                }
+                else if(direction.z < 0)
+                {
+                    moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.back;
+                }
                 controller.Move(moveDir.normalized * speed * Time.deltaTime);
             }
+            Vector3 pos = transform.position;
+            if(pos.y != 0f)
+            {
+                pos.y = 0f;
+                transform.position = pos;
+            }
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(jumpCoroutine());
+            }
         }
-        
+    }
+
+
+    IEnumerator jumpCoroutine()
+    {
+        animator.SetTrigger("jump");
+        yield return new WaitForSeconds(1.05f);
+        animator.SetTrigger("jump");
     }
 }

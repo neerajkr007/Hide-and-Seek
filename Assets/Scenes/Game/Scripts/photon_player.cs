@@ -11,6 +11,7 @@ public class photon_player : MonoBehaviourPunCallbacks
     private PhotonView pv;
     public GameObject myAvatar;
     public Cinemachine.CinemachineFreeLook cineCam;
+    public GameObject a;
 
     void Start()
     {
@@ -57,6 +58,8 @@ public class photon_player : MonoBehaviourPunCallbacks
 
     void Update()
     {
+        Vector3 pos = transform.position;
+        pos.y = 0f;
         if(Input.GetKeyDown(KeyCode.Space))
         {
             //create();

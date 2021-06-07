@@ -31,7 +31,7 @@ public class characterMovement : MonoBehaviour
             animator.SetFloat("horizontal", horizotal);
             float vertical = Input.GetAxis("Vertical");
             animator.SetFloat("vertical", vertical);
-            if(horizotal != 0f && horizotal != 1f)
+            if(horizotal == 0f && horizotal != 1f)
             {
                 //print(horizotal);//  + "  " + horizotal);
             }
@@ -61,6 +61,10 @@ public class characterMovement : MonoBehaviour
                 controller.Move(moveDir.normalized * speed * Time.deltaTime);
             }
             Vector3 pos = transform.position;
+            if(vertical == 0f)// && horizotal != 1f)
+            {
+                //print(pos.x  + "  " + pos.z);
+            }
             if(pos.y != 0f)
             {
                 pos.y = 0f;

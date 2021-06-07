@@ -4,9 +4,37 @@ using UnityEngine;
 
 public class openGate : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    Animator animator;
+
+    void Start()
     {
-        //Output the Collider's GameObject's name
-        print(collision.collider.name);
+        animator = GetComponent<Animator>();
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.name == "player(Clone)")
+        {
+            // print("entered");
+            animator.SetBool("isOpen_Obj_1", true);
+        }
+    }
+
+    void OnTriggerStay(Collider collider)
+    {
+        if(collider.name == "player(Clone)")
+        {
+            // print("staying");
+            animator.SetBool("isOpen_Obj_1", true);
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.name == "player(Clone)")
+        {
+            // print("exited");
+            animator.SetBool("isOpen_Obj_1", false);
+        }
     }
 }

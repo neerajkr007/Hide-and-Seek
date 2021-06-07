@@ -37,16 +37,18 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+     <Compile Include="Assets\Scenes\Game\Scripts\pauseMenu.cs" />
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
      <Compile Include="Assets\Scenes\Game\Scripts\photon_player.cs" />
+     <Compile Include="Assets\Scenes\Game\Scripts\shooting.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\join_room.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\create_room.cs" />
+     <Compile Include="Assets\Scenes\Game\Scripts\openGate.cs" />
      <Compile Include="Assets\Scenes\MainMenu\Scripts\update_names.cs" />
      <Compile Include="Assets\Scenes\Game\Scripts\characterMovement.cs" />
-     <Compile Include="Assets\Scenes\MainMenu\Scripts\Connect.cs" />
-     <Compile Include="Assets\FurnishedCabin\Scripts\MoveableObject.cs" />
      <Compile Include="Assets\FurnishedCabin\Scripts\MoveObjectController.cs" />
-     <Compile Include="Assets\Scenes\Game\Scripts\openGate.cs" />
+     <Compile Include="Assets\FurnishedCabin\Scripts\MoveableObject.cs" />
+     <Compile Include="Assets\Scenes\MainMenu\Scripts\Connect.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

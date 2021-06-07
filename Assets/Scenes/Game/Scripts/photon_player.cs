@@ -11,7 +11,6 @@ public class photon_player : MonoBehaviourPunCallbacks
     private PhotonView pv;
     public GameObject myAvatar;
     public Cinemachine.CinemachineFreeLook cineCam;
-    public GameObject a;
 
     void Start()
     {
@@ -25,15 +24,17 @@ public class photon_player : MonoBehaviourPunCallbacks
         // {
              createPlayer();
         // }
+// 25 29 34/20
+
     }
 
     void createPlayer()
     {
         Vector3 ogPos = transform.position;
         Vector3 pos = transform.position;
-        pos.x = Convert.ToSingle(UnityEngine.Random.Range(10, 50));
+        pos.x = Convert.ToSingle(UnityEngine.Random.Range(-30, -25));
         pos.y = 0f;
-        pos.z = Convert.ToSingle(UnityEngine.Random.Range(10, 50));
+        pos.z = Convert.ToSingle(UnityEngine.Random.Range(-29, -21));
         transform.position = pos;
         myAvatar = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "player"), transform.position, Quaternion.identity, 0);
         cineCam.Follow = myAvatar.transform;

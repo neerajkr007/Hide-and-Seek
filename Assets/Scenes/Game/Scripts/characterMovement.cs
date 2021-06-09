@@ -14,7 +14,7 @@ public class characterMovement : MonoBehaviour
     public Animator animator;
     private Vector3 direction;
     private float targetAngle;
-    private Vector3 moveDir;
+    public Vector3 moveDir;
     void Start()
     {
         //Cursor.visible = false;
@@ -58,6 +58,7 @@ public class characterMovement : MonoBehaviour
                 {
                     moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.back;
                 }
+                 //print(moveDir + " / " + moveDir.normalized);
                 controller.Move(moveDir.normalized * speed * Time.deltaTime);
             }
             Vector3 pos = transform.position;

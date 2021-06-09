@@ -16,11 +16,20 @@ public class shooting : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            //animator.SetBool("shooting", true);
+            animator.SetBool("shooting", true);
         }
         if(Input.GetMouseButtonUp(0))
         {
-            //animator.SetBool("shooting", false);
+            animator.SetBool("shooting", false);
+        }
+        if(animator.GetBool("shooting"))
+        {
+            gameObject.GetComponent<characterMovement>().speed = 3f;
+            
+        }
+        else
+        {
+            gameObject.GetComponent<characterMovement>().speed = 6f;
         }
     }
 }

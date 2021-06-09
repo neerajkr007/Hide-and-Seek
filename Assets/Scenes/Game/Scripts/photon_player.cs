@@ -22,7 +22,9 @@ public class photon_player : MonoBehaviourPunCallbacks
         // // }
         // if(pv.IsMine)
         // {
-             createPlayer();
+         Cursor.visible = false;
+         Cursor.lockState = CursorLockMode.Confined;
+        createPlayer();
         // }
 // 25 29 34/20
 

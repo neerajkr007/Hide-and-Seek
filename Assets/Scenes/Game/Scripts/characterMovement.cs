@@ -17,8 +17,7 @@ public class characterMovement : MonoBehaviour
     public Vector3 moveDir;
     void Start()
     {
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Confined;
+        
         pv = GetComponent<PhotonView>();
     }
     void Update()
@@ -39,7 +38,7 @@ public class characterMovement : MonoBehaviour
             if(direction.magnitude >= 0.1f)
             {
                 //print("works ?");
-                if(direction.z >= 0f)
+                if(direction.z > 0f)
                 {
                     targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                 }
@@ -47,16 +46,34 @@ public class characterMovement : MonoBehaviour
                 {
                     targetAngle = cam.eulerAngles.y;
                 }
+                if(direction.x > 0f && direction.z == 0)
+                {
+                    targetAngle = Mathf.Atan2(0f, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                }
+                else if(direction.x < 0 && direction.z == 0)
+                {
+                    targetAngle = Mathf.Atan2(0f, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                }
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-                if(direction.z >= 0f)
+                if(direction.z > 0f)
                 {
                     moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 }
                 else if(direction.z < 0)
                 {
                     moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.back;
+                }
+                if(direction.x > 0f && direction.z == 0)
+                {
+                    speed *= 1f/3f;
+                    moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.right;
+                }
+                else if(direction.x < 0 && direction.z == 0)
+                {
+                    speed *= 1f/3f;
+                    moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.left;
                 }
                  //print(moveDir + " / " + moveDir.normalized);
                 controller.Move(moveDir.normalized * speed * Time.deltaTime);
